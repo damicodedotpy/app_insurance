@@ -1,1 +1,4 @@
 .flaskenv
+.migrations/
+.venv/
+.idea/
