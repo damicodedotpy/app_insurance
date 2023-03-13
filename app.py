@@ -2,6 +2,7 @@
 
 # ******************************EXTERNAL LIBRARIES****************************
 from flask import Flask
+from dotenv import load_dotenv
 # ******************************OWN LIBRARIES*********************************
 from config import AppConfiguration
 from extensions import db, migrate
