@@ -1,4 +1,5 @@
 .flaskenv
-.migrations/
-.venv/
+migrations/
+venv/
 .idea/
+.DS_Store
