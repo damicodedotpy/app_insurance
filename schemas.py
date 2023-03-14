@@ -46,9 +46,17 @@ class CompleteUnitSchema(BasicUnitSchema):
     business = fields.Nested(BasicBusinessSchema(), dump_only=True)
     insurance = fields.Nested(BasicInsuranceSchema(), dump_only=True)
 
+class CompleteBusinessSchema(BasicBusinessSchema):
+    units = fields.List(fields.Nested(BasicUnitSchema()), dump_only=True)
+    insurance = fields.List(fields.Nested(BasicInsuranceSchema()), dump_only=True)
+
+class CompleteInsuranceSchema(BasicInsuranceSchema):
+    units = fields.List(fields.Nested(BasicUnitSchema()), dump_only=True)
+    business = fields.List(fields.Nested(BasicBusinessSchema()), dump_only=True)
+
 class BusinessInsuranceSchema(Schema):
-    business = fields.Nested(BasicBusinessSchema(), dump_only=True)
-    insurance = fields.Nested(BasicInsuranceSchema(), dump_only=True)
+    business = fields.Nested(BasicBusinessSchema())
+    insurance = fields.Nested(BasicInsuranceSchema())
 
 
 
