@@ -5,4 +5,4 @@ Considerations:
 
 Uncoming updates:
 
-1. March 14th 2023: The rest of the CRUD endpoints are going to be added.
+1. March 14th 2023: The rest of the CRUD endpoints are going to be added. ----> Completed
