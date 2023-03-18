@@ -1,0 +1,53 @@
+{% import "macros.jinja2" as macro_forms %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Databases manager</title>
+</head>
+<body>
+    <header>
+        <h1>Insurance Databases Manager</h1>
+    </header>
+
+    <div>
+        <div>
+            <h2>Databases</h2>
+            <form action="/home" method="POST">
+                <label for="database_type">Database</label>
+                <select id="database_type" name="database_type">
+                    <option value="business">Business</option>
+                    <option value="unit">Unit</option>
+                    <option value="insurance">Insurance</option>
+                    <option value="business_insurance">Business & Insurance</option>
+                </select>
+
+                <label for="action_type">Action</label>
+                <select id="action_type" name="action_type">
+                    <option value="all">All</option>
+                    <option value="search_one">Search one</option>
+                    <option value="add">Add</option>
+                    <option value="update">Update</option>
+                    <option value="delete">Delete</option>
+                </select>
+
+                <button type="submit">Send</button>
+            </form>
+
+            {{macro_forms.generate_form(selected_database, selected_action)}}
+
+        </div>
+
+        <div>
+            <h2>Results</h2>
+            <div>
+                {{database_response|safe}}
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

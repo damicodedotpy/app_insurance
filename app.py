@@ -11,6 +11,7 @@ from src.routes.units import blp as UnitsBlueprint
 from src.routes.bussiness import blp as BusinessBlueprint
 from src.routes.insurance import blp as InsuranceBlueprint
 from src.routes.bus_ins import blp as BusinessInsuranceBlueprint
+from src.routes.forms import blp as FormsBlueprint
 # ***********************************CODE*************************************
 def create_app():
     # Flask instance
@@ -25,12 +26,10 @@ def create_app():
     app.register_blueprint(BusinessBlueprint)
     app.register_blueprint(InsuranceBlueprint)
     app.register_blueprint(BusinessInsuranceBlueprint)
+    app.register_blueprint(FormsBlueprint)
 
     # Database creation
     with app.app_context():
         db.create_all()
 
     return app
-
-
-
