@@ -24,6 +24,7 @@ class BasicInsuranceSchema(Schema):
     rate = fields.String(required=True)
 
 class UpdateUnitSchema(Schema):
+    id = fields.Integer(load_only=True)
     vin = fields.String()
     make = fields.String()
     year = fields.Integer()
@@ -31,12 +32,14 @@ class UpdateUnitSchema(Schema):
     id_insurance = fields.Integer()
 
 class UpdateBusinessSchema(Schema):
+    id = fields.Integer(load_only=True)
     name = fields.String()
     state = fields.String()
     representative = fields.String()
     tel = fields.String()
 
 class UpdateInsuranceSchema(Schema):
+    id = fields.Integer(load_only=True)
     name = fields.String()
     rate = fields.String()
 
