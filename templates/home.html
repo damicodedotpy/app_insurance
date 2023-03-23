@@ -6,48 +6,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- INICIO: STYLESHEETS -->
+    <link rel="stylesheet" href="../src/css/style.css">
+    <!-- FIN: STYLESHEETS -->
+
+    <!-- INICIO: FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <!-- FIN: FUENTES -->
     <title>Databases manager</title>
 </head>
 <body>
-    <header>
-        <h1>Insurance Databases Manager</h1>
+    <header class="hero">
+        <h1><span>Databases Manager</span></h1>
     </header>
 
-    <div>
-        <div>
-            <h2>Databases</h2>
-            <form action="/home" method="POST">
-                <label for="database_type">Database</label>
-                <select id="database_type" name="database_type">
-                    <option value="business">Business</option>
-                    <option value="unit">Unit</option>
-                    <option value="insurance">Insurance</option>
-                    <option value="business_insurance">Business & Insurance</option>
-                </select>
+    <div class="container_general">
+        <div class="container_databases">
+            <h2><span>Databases</span></h2>
+            <div class="container_databases-menu">
+                <form action="/home" method="POST">
+                    <div class="container_databases-menu--options">
 
-                <label for="action_type">Action</label>
-                <select id="action_type" name="action_type">
-                    <option value="all">All</option>
-                    <option value="search_one">Search one</option>
-                    <option value="add">Add</option>
-                    <option value="update">Update</option>
-                    <option value="delete">Delete</option>
-                </select>
-
-                <button type="submit">Send</button>
-            </form>
-
+                        <div class="menu_option">
+                            <label for="database_type">Database</label>
+                            <select id="database_type" name="database_type">
+                                <option value="business">Business</option>
+                                <option value="unit">Unit</option>
+                                <option value="insurance">Insurance</option>
+                                <option value="business_insurance">Business & Insurance</option>
+                            </select>
+                        </div>
+    
+                        <div class="menu_option">
+                            <label for="action_type">Action</label>
+                            <select id="action_type" name="action_type">
+                                <option value="all">All</option>
+                                <option value="search_one">Search one</option>
+                                <option value="add">Add</option>
+                                <option value="update">Update</option>
+                                <option value="delete">Delete</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="container-button">
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
             {{macro_forms.generate_form(selected_database, selected_action)}}
-
         </div>
 
-        <div>
-            <h2>Results</h2>
+        <div class="container_results">
             <div>
-                {{database_response|safe}}
+                <h2><span>Results</span></h2>
+                <div>
+                    {{database_response|safe}}
+                </div>
+            </div>
+    
+            <div>
+                <h2><span>Export Database</span></h2>
+                <form action="/export/" method="GET">
+                    <label for="units">Units</label>
+                    <input id="units" type="radio" name="database" value="units">
+    
+                    <label for="business">Business</label>
+                    <input id="business" type="radio" name="database" value="business">
+    
+                    <label for="insurance">Insurance</label>
+                    <input id="insurance" type="radio" name="database" value="insurance">
+    
+                    <button type="submit">Send</button>
+                </form>
             </div>
         </div>
     </div>
-    
 </body>
 </html>

@@ -1,0 +1,15 @@
+NOTES - Exportacion de bases de datos en excel: 
+Se pasa output como parámetro al objeto ExcelWriter() para indicarle que escriba el archivo de Excel 
+en la secuencia de bytes que se encuentra en el objeto BytesIO denominado output.
+
+El objeto ExcelWriter() es una clase de pandas que se utiliza para crear un archivo de Excel. Cuando 
+se instancia la clase ExcelWriter(), se le pasa un objeto BytesIO como primer parámetro. Esto indica 
+a ExcelWriter() que debe escribir el archivo de Excel en el objeto BytesIO.
+
+Después de pasar el objeto writer a df_units.to_excel(writer), los datos del DataFrame df_units se 
+escriben en el objeto BytesIO que se encuentra en output. Finalmente, el método writer.save() se 
+llama para guardar el archivo de Excel en la secuencia de bytes del objeto BytesIO.
+
+Al pasar output como parámetro al objeto ExcelWriter(), se asegura que el archivo de Excel generado 
+se almacene en el objeto BytesIO en lugar de guardarlo en el sistema de archivos local o en otro lugar. 
+Esto permite que el archivo de Excel se envíe al cliente como una respuesta HTTP utilizando send_file().

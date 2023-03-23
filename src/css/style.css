@@ -1,5 +1,17 @@
 :root {
+    /* FONTS */
+    --font1: 'Questrial', sans-serif;
 
+    /* COLOR PALET */
+    --white: #ffffff;
+    --black: #000000;
+    --bone: #F6F1F1;
+    --gray: #515760;
+    --green0: #2E9F85;
+    --green1: #69c16e;
+    --green2: #D7EC8F;
+    --blue0: #19A7CE;
+    --blue1: #146C94;
 }
 
 /* PAUL IRISH - BOX SIZING CODE */
@@ -16,6 +28,107 @@ html {
 
 /* GLOBALES */
 body {
+    font-family: var(--font1);
     font-size: 1.6rem;
+    background-color: var(--green1);
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: var(--bone);
+}
+
+span {
+    background-color: var(--green0);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+label {
+    color: var(--gray);
+}
+
+select {
+    width: 15rem;
+}
+
+.menu_option {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* HERO - TITULO */
+.hero {
+    text-align: center;
+    color: var(--bone);
+}
+
+/* CONTAINER - GENERAL */
+.container_general {
+    /* background-color: var(--bone); */
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+/* CONTAINER - DATABASES */
+.container_databases {
+    background-color: var(--green2);
+    width: 50vw;
+    height: 50vh;
+    border-radius: 1.5rem;
+    box-shadow: -2px 3px 7px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 3px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 3px 7px 0px rgba(0,0,0,0.75);
+}
+
+.container_databases-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+}
+
+.container_databases-menu--options {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* CONTAINER - RESULTS */
+.container_results {
+    background-color: var(--green2);
+    width: 50vw;
+    border-radius: 1.5rem;
+    box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.75);
+}
+
+/* CONTAINER - EXPORT DATABASES */
+
+/* CONTAINER - BUTTON */
+.container-button {
+    display: flex;
+    justify-content: end;
+
+}
+
+button {
+    font-size: 1.5rem;
+    margin-top: 2rem ;
+    padding: .5rem 0;
+    background-color: var(--green1);
+    color: var(--bone);
+    border-radius: .5rem;
+    width: 10rem;
+    transition: initial(.5s);
+}
+
+button:hover {
+    background-color: var(--green0);
+    transition: ease-in(.5s);
 }
 

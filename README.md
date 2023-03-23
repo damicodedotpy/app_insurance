@@ -10,4 +10,3 @@ Uncoming updates:
 2. March 20th 2023: Start checking the Business GET endpoint for getting a business by ID because the endpoint is not working, seems that is not receiving correctly the information from the form which is written in the macros, justo to remind you Damian of the future ;) ----> Completed
 
 3. March 22th 2023: The Backend has been finished, now we got to develop the Frontend. The next step is to code the style.css file.
-
