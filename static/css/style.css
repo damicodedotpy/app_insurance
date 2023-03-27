@@ -49,13 +49,25 @@ label {
     color: var(--gray);
 }
 
-select {
+select,
+input[type="text"],
+input[type="tel"],
+input[type="number"] {
     width: 15rem;
+    height: 3rem;
+    background-color: #e8e8e8;
+    border-radius: .5rem;
+    border-style: none;
+}
+
+li {
+    list-style: none;
 }
 
 .menu_option {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -78,7 +90,7 @@ select {
 .container_databases {
     background-color: var(--green2);
     width: 50vw;
-    height: 50vh;
+    height: auto;
     border-radius: 1.5rem;
     box-shadow: -2px 3px 7px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: -2px 3px 7px 0px rgba(0,0,0,0.75);
@@ -93,7 +105,51 @@ select {
 
 .container_databases-menu--options {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.container_forms {
+    /* border-style: solid; */
+    /* border-color: var(--green0); */
+    margin: 0 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    text-align: center;
+    padding: 0 5rem;
+    gap: 0 7rem;
+}
+
+.form_field {
+display: flex;
+gap: 1rem;
+align-items: center;
+}
+
+.form_button {
+    grid-column: 1/3;
+    display: flex;
+    justify-content: end;
+}
+
+.form-field-2 {
+
+}
+
+.form-field-3 {
+
+}
+
+.form-field-4 {
+
+}
+
+.form-field-5 {
+
+}
+
+.form-field-6 {
+
 }
 
 
@@ -113,7 +169,7 @@ select {
 .container-button {
     display: flex;
     justify-content: end;
-
+    margin-right: 5rem;
 }
 
 button {

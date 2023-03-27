@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- INICIO: STYLESHEETS -->
-    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
     <!-- FIN: STYLESHEETS -->
 
     <!-- INICIO: FUENTES -->
@@ -57,7 +58,10 @@
                     </div>
                 </form>
             </div>
-            {{macro_forms.generate_form(selected_database, selected_action)}}
+
+            <div>
+                {{macro_forms.generate_form(selected_database, selected_action)}}
+            </div>
         </div>
 
         <div class="container_results">

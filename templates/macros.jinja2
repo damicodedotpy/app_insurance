@@ -1,83 +1,94 @@
 {% macro generate_form(selected_database, selected_action) %}
 {# INICIO: BUSINESS FORMS #}
 {% if selected_database == 'business' and selected_action == 'add'%}
-<form action="/business" method="POST">
-<ul>
-    <li>
-        <label for="business_name">Name</label>
-        <input id="business_name" name="name" type="text">
-    </li>
+<form action="/business" method="POST" class="container_forms">
 
-    <li>
-        <label for="business_state">State</label>
-        <input id="business_state" name="state" type="text">
-    </li>
+        <div class="form_field">
+            <label for="business_name">Name</label>
+            <input id="business_name" name="name" type="text">
+        </div>
+    
 
-    <li>
-        <label for="business_representative">Representative</label>
-        <input id="business_representative" name="representative" type="text">
-    </li>
+        <div class="form_field">
+            <label for="business_state">State</label>
+            <input id="business_state" name="state" type="text">
+        </div>
+    
 
-    <li>
-        <label for="business_tel">Tel</label>
-        <input id="business_tel" name="tel" type="tel">
-    </li>
-</ul>
-    <button type="submit">Send</button>
+        <div class="form_field">
+            <label for="business_representative">Representative</label>
+            <input id="business_representative" name="representative" type="text">
+        </div>
+    
+
+        <div class="form_field">
+            <label for="business_tel">Tel</label>
+            <input id="business_tel" name="tel" type="tel">
+        </div>
+            
+        <div class="form_button"> 
+            <button type="submit">Send</button>
+        </div>
 </form>
 
 {% elif selected_database == 'business' and selected_action == 'search_one'%}
-<form action="/business/" method="GET">
-    <ul>
-        <li>
+<form action="/business/" method="GET" class="container_forms">
+
+        <div class="form_field">
             <label for="business_id">ID</label>
             <input id="business_id" name="business_id" type="number">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div>
+        
+        <div class="form_button">
+            <button type="submit">Send</button>
+        </div>
 </form>
 
 {% elif selected_database == 'business' and selected_action == 'update'%}
-<form action="/business/update/" method="POST">
-    <ul>
-        <li>
+<form action="/business/update/" method="POST" class="container_forms">
+        
+        <div class="form_field">
             <label for="business_id">ID</label>
             <input id="business_id" name="id" type="number">
-        </li>
+        </div>
 
-        <li>
+        <div class="form_field">
             <label for="business_name">Name</label>
             <input id="business_name" name="name" type="text">
-        </li>
+        </div>
     
-        <li>
+        <div class="form_field">
             <label for="business_state">State</label>
             <input id="business_state" name="state" type="text">
-        </li>
+        </div>
     
-        <li>
+        <div class="form_field">
             <label for="business_representative">Representative</label>
             <input id="business_representative" name="representative" type="text">
-        </li>
+        </div>
     
-        <li>
+        <div class="form_field">
             <label for="business_tel">Tel</label>
             <input id="business_tel" name="tel" type="tel">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div>
+
+        <div class="form_button">
+            <button type="submit">Send</button>
+        </div>
     </form>
 
 
 {% elif selected_database == 'business' and selected_action == 'delete'%}
-<form action="/business/delete/">
-    <ul>
-        <li>
+<form action="/business/delete/" class="container_forms">
+
+        <div class="form_field">
             <label for="business_id">ID</label>
             <input id="business_id" name="business_id" type="text">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div>
+    
+        <div class="form_button">
+            <button type="submit">Send</button>
+        </div>
 </form>
 {# FIN: BUSINESS FORMS #}
 
