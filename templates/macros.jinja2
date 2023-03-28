@@ -95,189 +95,209 @@
 
 {# INICIO: UNIT FORMS #}
 {% elif selected_database == 'unit' and selected_action == 'add'%}
-<form action="/units" method="POST">
-<ul>
-    <li>
+<form action="/units" method="POST" class="container_forms">
+
+    <div class="form_field">
         <label for="unit_vin">VIN#</label>
         <input id="unit_vin" name="vin" type="text">
-    </li>
+    </div>
 
-    <li>
+    <div class="form_field">
         <label for="unit_make">Make</label>
         <input id="unit_make" name="make" type="text">
-    </li>
+    </div>
 
-    <li>
+    <div class="form_field">
         <label for="unit_year">Year</label>
         <input id="unit_year" name="year" type="number">
-    </li>
+    </div>
 
-    <li>
+    <div class="form_field">
         <label for="business_id">Business ID</label>
         <input id="business_id" name="id_business" type="number">
-    </li>
+    </div>
 
-    <li>
+    <div class="form_field">
         <label for="insurance_id">Insurance ID</label>
         <input id="insurance_id" name="id_insurance" type="number">
-    </li>
-</ul>
-<button type="submit">Send</button>
+    </div>
+
+    <div class="form_button">
+        <button type="submit">Send</button>
+    </div>
 </form>
 
 {% elif selected_database == 'unit' and selected_action == 'search_one'%}
-<form action="/units/" method="GET">
-    <ul>
-        <li>
+<form action="/units/" method="GET" class="container_forms">
+    
+        <div class="form_field">
             <label for="unit_id">ID</label>
             <input id="unit_id" name="unit_id" type="number">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div >
+    
+        <div class="form_button">
+            <button type="submit">Send</button>
+        </div>
 </form>
 
 {% elif selected_database == 'unit' and selected_action == 'update'%}
-<form action="/units/update/" method="POST">
-    <ul>
-        <li>
+<form action="/units/update/" method="POST" class="container_forms">
+    
+        <div class="form_field">
             <label for="unit_id">ID</label>
             <input id="unit_id" name="id" type="number">
-        </li>
+        </div>
 
-        <li>
+        <div class="form_field">
             <label for="unit_vin">VIN#</label>
             <input id="unit_vin" name="vin" type="text">
-        </li>
+        </div>
     
-        <li>
+        <div class="form_field">
             <label for="unit_make">Make</label>
             <input id="unit_make" name="make" type="text">
-        </li>
+        </div>
     
-        <li>
+        <div class="form_field">
             <label for="unit_year">Year</label>
             <input id="unit_year" name="year" type="number">
-        </li>
+        </div>
     
-        <li>
+        <div class="form_field">
             <label for="business_id">Business ID</label>
             <input id="business_id" name="id_business" type="number">
-        </li>
+        </div>
     
-        <li>
+        <div class="form_field">
             <label for="insurance_id">Insurance ID</label>
             <input id="insurance_id" name="id_insurance" type="number">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
-    </form>
+        </div>
+    
+        <div class="form_button">
+            <button type="submit">Send</button>
+        </div>
+</form>
 
 {% elif selected_database == 'unit' and selected_action == 'delete'%}
-<form action="/units/delete/" method="GET">
-    <ul>
-        <li>
+<form action="/units/delete/" method="GET" class="container_forms">
+    
+        <div class="form_field">
             <label for="unit_id">ID</label>
             <input id="unit_id" name="unit_id" type="number">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div>
+
+    <div class="form_button">
+        <button type="submit">Send</button>
+    </div>
 </form>
 {# FIN: UNIT FORMS #}
 
 
 {# INICIO: INSURANCE FORMS #}
 {% elif selected_database == 'insurance' and selected_action == 'add'%}
-<form action="/insurance" method="POST">
-    <ul>
-        <li>
+<form action="/insurance" method="POST" class="container_forms">
+    
+        <div class="form_field">
             <label for="insurance_name">Name</label>
             <input id="insurance_name" name="name" type="text">
-        </li>
+        </div>
     
-        <li>
+        <div class="form_field">
             <label for="insurance_rate">Rate</label>
             <input id="insurance_rate" name="rate" type="text">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div>
+    
+    <div class="form_button">
+        <button type="submit">Send</button>
+    </div>
 </form>
 
 {% elif selected_database == 'insurance' and selected_action == 'search_one'%}
-<form action="/insurance/" method="GET">
-    <ul>
-        <li>
+<form action="/insurance/" method="GET" class="container_forms">
+    
+        <div class="form_field">
             <label for="insurance_id">ID</label>
             <input id="insurance_id" name="insurance_id" type="number">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div>
+
+        <div class="form_button">
+            <button type="submit">Send</button>
+        </div>
 </form>
 
 {% elif selected_database == 'insurance' and selected_action == 'update'%}
-<form action="/insurance/update/" method="POST">
-    <ul>
-        <li>
+<form action="/insurance/update/" method="POST" class="container_forms">
+    
+        <div class="form_field">
             <label for="insurance_id">ID</label>
             <input id="insurance_id" name="id" type="number">
-        </li>
+        </div>
 
-        <li>
+        <div class="form_field">
             <label for="insurance_name">Name</label>
             <input id="insurance_name" name="name" type="text">
-        </li>
+        </div>
     
-        <li>
+        <div class="form_field">
             <label for="insurance_rate">Rate</label>
             <input id="insurance_rate" name="rate" type="text">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div>
+    
+        <div class="form_button">
+            <button type="submit">Send</button>
+        </div>
 </form>
 
 {% elif selected_database == 'insurance' and selected_action == 'delete'%}
-<form action="/insurance/delete/" method="GET">
-    <ul>
-        <li>
+<form action="/insurance/delete/" method="GET" class="container_forms">
+    
+        <div class="form_field">
             <label for="insurance_id">ID</label>
             <input id="insurance_id" name="id" type="number">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div>
+    
+        <div class="form_button">
+            <button type="submit">Send</button>
+        </div>
 </form>
 {# FIN: INSURANCE FORMS #}
 
 
 {# INICIO: BUSINESS & INSURANCE FORMS #}
 {% elif selected_database == 'business_insurance' and selected_action == 'add'%}
-<form action="/bus_ins/add/" method="GET">
-    <ul>
-        <li>
+<form action="/bus_ins/add/" method="GET" class="container_forms">
+    
+        <div class="form_field">
             <label for="business_id">Business ID</label>
             <input id="business_id" name="business_id" type="number">
-        </li>
+        </div>
         
-        <li>
+        <div class="form_field">
             <label for="insurance_id">Insurance ID</label>
             <input id="insurance_id" name="insurance_id" type="number">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div>
+
+        <div class="form_button">
+            <button type="submit">Send</button>
+        </div>
 </form>
 
 {% elif selected_database == 'business_insurance' and selected_action == 'delete'%}
-<form action="/bus_ins/delete/" method="GET">
-    <ul>
-        <li>
+<form action="/bus_ins/delete/" method="GET" class="container_forms">
+    
+        <div class="form_field">
             <label for="business_id">Business ID</label>
             <input id="business_id" name="business_id" type="number">
-        </li>
+        </div>
         
-        <li>
+        <div class="form_field">
             <label for="insurance_id">Insurance ID</label>
             <input id="insurance_id" name="insurance_id" type="number">
-        </li>
-    </ul>
-    <button type="submit">Send</button>
+        </div>
+        
+        <div class="form_button">
+            <button type="submit">Send</button>
+        </div>
 </form>
 {# FIN: BUSINESS & INSURANCE FORMS #}
 {% endif %}

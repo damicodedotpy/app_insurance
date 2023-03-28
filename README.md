@@ -11,4 +11,7 @@ Uncoming updates:
 
 3. March 22th 2023: The Backend has been finished, now we got to develop the Frontend. The next step is to code the style.css file. ----> Completed
 
-4. March 27th 2023: Styles has been applied to the business form. Now it should be applied on the rest of forms (Units, Insurance, Business & Insurance).
+4. March 27th 2023: Styles has been applied to the business form. Now it should be applied on the rest of forms (Units, Insurance, Business & Insurance). ----> Completed
+
+5. March 29th 2023: I got to fix the mess I made in the render code line 69 of the home.html. I have to 
+style properly the database_response. Everything is working, just looks like a... 

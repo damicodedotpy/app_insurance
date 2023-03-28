@@ -67,11 +67,17 @@
         <div class="container_results">
             <div>
                 <h2><span>Results</span></h2>
-                <div>
-                    {{database_response|safe}}
+                <div class="container_results-json">
+                        {% for dictionary in database_response %}
+                            <div class="lead_info">
+                            {% for key, value in dictionary.items() %}
+                                    <p>{{key}}: {{value}}</p>
+                            </div>
+                            {% endfor %}
+                        {% endfor %}
                 </div>
             </div>
-    
+            
             <div>
                 <h2><span>Export Database</span></h2>
                 <form action="/export/" method="GET">

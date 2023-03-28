@@ -114,7 +114,7 @@ li {
     margin: 0 2rem 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     text-align: center;
     padding: 0 5rem;
     gap: 0 7rem;
@@ -132,26 +132,6 @@ align-items: center;
     justify-content: end;
 }
 
-.form-field-2 {
-
-}
-
-.form-field-3 {
-
-}
-
-.form-field-4 {
-
-}
-
-.form-field-5 {
-
-}
-
-.form-field-6 {
-
-}
-
 
 /* CONTAINER - RESULTS */
 .container_results {
@@ -161,6 +141,16 @@ align-items: center;
     box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.75);
+}
+
+.container_results-json {
+    background-color: var(--bone);
+    margin: 6rem;
+    border-radius: .5rem;
+}
+
+.lead_info {
+    background-color: var(--black);
 }
 
 /* CONTAINER - EXPORT DATABASES */
