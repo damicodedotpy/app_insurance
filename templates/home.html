@@ -67,14 +67,32 @@
         <div class="container_results">
             <div>
                 <h2><span>Results</span></h2>
+
+
+                
                 <div class="container_results-json">
+                    {% if database_response | checker() == "lista" %}
                         {% for dictionary in database_response %}
-                            <div class="lead_info">
+                        <div class="square">
                             {% for key, value in dictionary.items() %}
                                     <p>{{key}}: {{value}}</p>
-                            </div>
                             {% endfor %}
+                        </div>
                         {% endfor %}
+                    {% elif database_response | checker() == "diccionario" %}
+                        <div class="square">
+                        {% for key, value in database_response.items() %}
+                                <p>{{key}}: {{value}}</p>
+                        {% endfor %}
+                        </div>
+
+                    {% elif database | checker() == "string"%}
+                        <div class="square">
+                            <p>{{database_response}}</p>
+                        </div>
+
+                    {% endif %}
+
                 </div>
             </div>
             

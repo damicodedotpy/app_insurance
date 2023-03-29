@@ -14,4 +14,6 @@ Uncoming updates:
 4. March 27th 2023: Styles has been applied to the business form. Now it should be applied on the rest of forms (Units, Insurance, Business & Insurance). ----> Completed
 
 5. March 29th 2023: I got to fix the mess I made in the render code line 69 of the home.html. I have to 
-style properly the database_response. Everything is working, just looks like a... 
+style properly the database_response. Everything is working, just looks like a... ----> Completed
+
+6. March 30th 2023: Fix the 'checker' method renderized with @blp.app_template_filter() in the Business routes module 'cause is not workin when the endpoint's response is a string. Line 89 of the home.html

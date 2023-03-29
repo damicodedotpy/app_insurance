@@ -144,13 +144,15 @@ align-items: center;
 }
 
 .container_results-json {
-    background-color: var(--bone);
+    /* background-color: var(--bone); */
     margin: 6rem;
     border-radius: .5rem;
 }
 
-.lead_info {
-    background-color: var(--black);
+.square {
+    background-color: var(--bone);
+    border-radius: .5rem;
+
 }
 
 /* CONTAINER - EXPORT DATABASES */

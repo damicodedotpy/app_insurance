@@ -7,10 +7,23 @@ from flask.views import MethodView
 from marshmallow import ValidationError
 # ******************************OWN LIBRARIES*********************************
 from extensions import db
+from src.functions.functions import *
 from src.models.Business import BusinessModel
 from schemas import BasicBusinessSchema, CompleteBusinessSchema, UpdateBusinessSchema
 # ***********************************CODE*************************************
 blp = Blueprint("business", __name__, description="All busimess funcitonalities")
+
+@blp.app_template_filter(name="checker")
+def checker(value):
+    if type(value) == list:
+        return "lista"
+    elif type(value) == dict:
+        return "diccionario"
+    elif type(value) == str:
+        return "string"
+    else:
+        return "Tipo de dato desconocido"
+
 
 @blp.route("/business")
 class BusinessView(MethodView):
@@ -45,7 +58,8 @@ class BusinessView(MethodView):
             abort(500, message="Something has occured while adding the new business into de database.")
         schema = BasicBusinessSchema()
         database_response = schema.dump(business)
-        return render_template("home.html", database_response=database_response)
+        return render_template("home.html", database_response="Business created successfully!")
+    
     
 @blp.route("/business/update/")
 class BusinessUpdateView(MethodView):
@@ -96,8 +110,8 @@ class BusinessUpdateView(MethodView):
             database_response = schema_response.dump(business_updated)
         except:
             return jsonify({"message": "An error has occurred while serializing the object updated"})
-        return render_template("home.html", database_response=database_response)
-
+        return render_template("home.html", database_response=str("Business updated successfully!"))
+    
 
 @blp.route("/business/")
 class BusinessIDView(MethodView):
