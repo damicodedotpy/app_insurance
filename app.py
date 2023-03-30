@@ -36,7 +36,17 @@ def create_app():
     with app.app_context():
         db.create_all()
         
-    # Functions
+    # Template filters for Jinja2
+    @app.template_filter(name="checker")
+    def checker(value):
+        if type(value) == list:
+            return "lista"
+        elif type(value) == dict:
+            return "diccionario"
+        elif type(value) == str:
+            return "string"
+        else:
+            return "Tipo de dato desconocido"
 
     return app
 

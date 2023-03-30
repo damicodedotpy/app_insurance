@@ -13,16 +13,29 @@ from schemas import BasicBusinessSchema, CompleteBusinessSchema, UpdateBusinessS
 # ***********************************CODE*************************************
 blp = Blueprint("business", __name__, description="All busimess funcitonalities")
 
-@blp.app_template_filter(name="checker")
-def checker(value):
-    if type(value) == list:
-        return "lista"
-    elif type(value) == dict:
-        return "diccionario"
-    elif type(value) == str:
-        return "string"
-    else:
-        return "Tipo de dato desconocido"
+
+# @blp.app_template_filter(name="checker")
+# def checker(value):
+#     '''
+#     Haber colocado el template filter aqui
+#     y con este decorador funciona para la
+#     aplicacion y hace su trabajo para el 
+#     resto de los blueprints y endpoints
+#     tambien, pero no es correcto que esté
+#     ubicado en este lugar un recurso que
+#     aplica para toda la aplicacion. Es por
+#     eso que se paso al modulo app.py
+#     en una seccion llamada Filters y se usa
+#     el decorador @app.filter_template()
+#     '''
+#     if type(value) == list:
+#         return "lista"
+#     elif type(value) == dict:
+#         return "diccionario"
+#     elif type(value) == str:
+#         return "string"
+#     else:
+#         return "Tipo de dato desconocido"
 
 
 @blp.route("/business")

@@ -156,6 +156,15 @@ align-items: center;
 }
 
 /* CONTAINER - EXPORT DATABASES */
+.container_exports {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.export_option {
+
+}
 
 /* CONTAINER - BUTTON */
 .container-button {
@@ -166,7 +175,7 @@ align-items: center;
 
 button {
     font-size: 1.5rem;
-    margin-top: 2rem ;
+    margin: 2rem 0;
     padding: .5rem 0;
     background-color: var(--green1);
     color: var(--bone);

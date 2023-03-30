@@ -54,7 +54,7 @@
                     </div>
                     
                     <div class="container-button">
-                        <button type="submit">Send</button>
+                        <button type="submit">Request</button>
                     </div>
                 </form>
             </div>
@@ -86,11 +86,10 @@
                         {% endfor %}
                         </div>
 
-                    {% elif database | checker() == "string"%}
+                    {% elif database_response | checker() == "string" %}
                         <div class="square">
                             <p>{{database_response}}</p>
                         </div>
-
                     {% endif %}
 
                 </div>
@@ -99,16 +98,27 @@
             <div>
                 <h2><span>Export Database</span></h2>
                 <form action="/export/" method="GET">
-                    <label for="units">Units</label>
-                    <input id="units" type="radio" name="database" value="units">
+                    <div class="container_exports">
+
+                        <div class="export_option">
+                            <label for="units">Units</label>
+                            <input id="units" type="radio" name="database" value="units">
+                        </div>
+        
+                        <div class="export_option">
+                            <label for="business">Business</label>
+                            <input id="business" type="radio" name="database" value="business">
+                        </div>
+        
+                        <div class="export_option">
+                            <label for="insurance">Insurance</label>
+                            <input id="insurance" type="radio" name="database" value="insurance">
+                        </div>
+                    </div>
     
-                    <label for="business">Business</label>
-                    <input id="business" type="radio" name="database" value="business">
-    
-                    <label for="insurance">Insurance</label>
-                    <input id="insurance" type="radio" name="database" value="insurance">
-    
-                    <button type="submit">Send</button>
+                    <div class="container-button">
+                        <button type="submit">Export</button>
+                    </div>
                 </form>
             </div>
         </div>
